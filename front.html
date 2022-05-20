@@ -1,0 +1,134 @@
+<html>
+    <head>
+       
+        <title>Big Mart Sales Prediction</title>
+    </head>
+    <body>
+        <div class = "container">
+        <h1 style="text-align : center">Big Mart Sales Prediction</h1>
+        </div>
+        <h2 style = "text-align : center " >The aim is to build a predictive model and find out the sales of each product at a particular store</h2>
+        
+        <br>
+        <div class="file">
+            
+         
+        </div>
+        
+    <div class = div1>
+        <input type="file" id="myFile" name="filename">
+    </div>
+    <div><button id = "upload"> PREDICT </button></div>
+        
+    </div>
+    <div>        
+    <select id="select">
+        <option value="none" selected disabled hidden>Select an Option</option>
+        <option value="linear">Linear Regression</option>
+        <option value="Decision">Decision Tree</option>
+        <option value="Random">Random Forest</option> 
+    </select>
+    </div>
+    <br>
+    <br>
+    <br>
+
+        <div class= "div3">
+            <textarea  id="text" rows=15 columns = 25></textarea>
+        </div>
+        <div class="div4">
+            <textarea  id="text1"  rows=15 columns = 25></textarea> 
+        </div>
+        
+        <br>
+        <div class="text2>">
+            <p id="para">Accuracy : </p>  
+            <textarea id="text2"  rows=2 columns = 5></textarea>
+        </div>
+        <button id="but">DOWNLOAD</button>
+         
+        
+         
+        </body>
+    <style>
+        h1{
+            color: brown;
+        }
+        h2{
+            color : blue;
+        }
+        #para{
+        position:relative;
+         left:360px;
+          top:310px
+        }
+        #select{
+            position: absolute;
+    top: 30%;  
+    left: 32%; 
+    
+        }
+        #upload{
+            position: absolute;
+            top: 40%;
+            left : 780px;
+        }
+        #myFile{
+        top : 30%;
+        }
+        #text2{
+            position: absolute;
+    top: 87%;  
+    left: 36%; 
+    transform: translate(-50%, -50%);
+        }
+        #text{
+           
+            position: absolute;
+    top: 64%;  
+    left: 36%; 
+    transform: translate(-50%, -50%);
+        }
+        #text1{
+            position: absolute;
+            top: 47%;
+            left : 750px;
+        }
+        
+
+
+.button {
+    position: relative;
+           left : 680px;
+            top : 800% ;
+}
+        .div1{
+            position: relative;
+           left : 740px;
+            top : 10% ;
+        }
+        
+        
+        #but{
+            position: relative;
+            top : 47%;
+            left : 780px;
+        }
+        
+        
+    </style>
+    <script>
+        document.getElementById("select").addEventListener('change', function() {
+    if (this.value == "linear") { 
+      document.getElementById("text").innerHTML = "Linear regression analysis is used to predict the value of a variable based on the value of another variable. The variable you want to predict is called the dependent variable. The variable you are using to predict the other variable's value is called the independent variable."; 
+    } else if(this.value == "Decision"){
+        document.getElementById("text").innerHTML = "Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features.";
+    }
+    else {
+        document.getElementById("text").innerHTML = "Random forest is a Supervised Machine Learning Algorithm that is used widely in Classification and Regression problems. It builds decision trees on different samples and takes their majority vote for classification and average in case of regression."
+    }
+       
+    
+});
+    </script>
+</html>
